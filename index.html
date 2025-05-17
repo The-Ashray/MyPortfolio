@@ -36,12 +36,26 @@
 
         header {
             text-align: center;
-            padding: 6rem 0;
+            padding: 8rem 0 6rem;
             background: var(--gradient);
             color: white;
             margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
         }
 
         header::after {
@@ -62,17 +76,28 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             margin-bottom: 2rem;
             transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
         }
 
         .section:hover {
             transform: translateY(-5px);
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }
 
         .skill-category {
@@ -80,6 +105,11 @@
             padding: 1.5rem;
             border-radius: 10px;
             border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            border-color: var(--primary);
         }
 
         .skill-category h3 {
@@ -87,6 +117,7 @@
             color: var(--primary);
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--primary);
+            font-size: 1.3rem;
         }
 
         .skills-list {
@@ -215,17 +246,23 @@
             }
             
             header {
-                padding: 4rem 0;
+                padding: 6rem 0 4rem;
             }
             
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/160" alt="Ashray K A" class="profile-img">
         <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">ASHRAY K A</h1>
         <p style="font-size: 1.2rem;">
             <i class="fas fa-envelope"></i> ashrayka001@gmail.com | 
@@ -288,7 +325,7 @@
                 </div>
                 <div class="timeline-item">
                     <h3>XII (CBSE)</h3>
-                    <p><a href="https://navodaya.gov.in/nvs/nvs-school/MANGALURU/en/home/" class="institution-link" target="_blank">JNV Mudipu, Mangaluru</a></p>
+                    <p><a href="https://g.co/kgs/qVFzRAr" class="institution-link" target="_blank">JNV Mudipu, Mangaluru</a></p>
                     <p>95.00% | 2022</p>
                 </div>
             </div>
@@ -349,8 +386,8 @@
     <footer>
         <div class="social-links">
             <a href="mailto:ashrayka001@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
         <p style="margin-top: 1rem;">© 2024 Ashray K A | All rights reserved</p>
     </footer>
